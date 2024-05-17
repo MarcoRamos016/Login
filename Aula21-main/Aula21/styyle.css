@@ -1,0 +1,121 @@
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url(/Aula21/img/pexels-vladalex94-1402787.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+
+.left-login{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.left-login > h1{
+    font-size: 3vw;
+    color: rgb(67, 204, 135);
+    background: rgb(19, 18, 18);
+    border-radius: 20px;
+}
+
+
+
+.card-login{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px  160px;
+    background: #00000050;
+    border-radius: 20px;
+    box-shadow: 0px 10px 40px rgb(0, 0, 0);
+    margin-left: 500px;
+    margin-top: 200px;
+}
+
+.card-login > h1{
+    color: rgb(40, 197, 137);
+    font-weight: 800;
+    margin: 0;
+}
+
+.textfield{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px 0px;
+}
+
+.textfield > input{
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    background: rgb(46, 40, 48);
+    color: rgb(49, 170, 179);
+    font-size:  12pt;
+    box-shadow: 0px 10px 40px black;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.textfield > label{
+    color: rgb(32, 211, 142);
+    margin-bottom: 10px;
+}
+
+.textfield > input::placeholder{
+    color: rgb(244, 238, 247);
+}
+
+.btn-login{
+    width: 50%;
+    padding: 16px 0px;
+    margin: 25px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: rgb(25, 10, 39);
+    background: rgb(33, 192, 99);
+    cursor: pointer;
+    box-shadow: 0px 10px 40px -12px rgb(36, 167, 112);
+    transition: 500ms;
+}
+
+.btn-login:hover{
+    transform: scale(1.2);
+
+}
+
+table {
+
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 5%;
+    
+}
+th{
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    color: white;
+    font-weight: 800;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 300px;
+}
+th {
+    background-color: #00000080;
+  
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto</title>
+    <link rel="stylesheet" href="styyle.css">
+</head>
+<body>
+    <form id="cadastroForm">
+        <div class="card-login">
+         <h1>CADASTRO</h1>
+            <div class="textfield">
+               <label for="id">Id</label>
+               <input id="id" type="text" name="id" placeholder="Id" required>
+            </div>
+            <div class="textfield">
+             <label for="nome">Nome</label>
+             <input id="nome" type="text" name="nome" placeholder="Nome" required>
+          </div>
+          <div class="textfield">
+            <label for="telefone">Telefone</label>
+            <input id="telefone" type="password" name="telefone" placeholder="Telefone" required>
+         </div>
+          <button id="submit" name="login" class="btn-login">CADASTRAR</button>
+          </div>
+        </form>
+
+        <table id="dataTable">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nome</th>
+                    <th>Telefone</th>
+                </tr>
+            </thead>
+        
+        
+        <script src="script.js"></script>
+
+</body>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    // capturar referencia do conteudo da tabela 
+    var tableBody = document.querySelector("#dataTable tbody");
+
+
+    for (var i = 0; i < sessionStorage.length; i++) {
+        
+        if (sessionStorage.key(i) == "produtos"){
+
+            var key = sessionStorage.key(i);
+            var value = JSON.parse(sessionStorage.getItem(key));
+
+            for(var j = 0; j <= value.length; j++){
+                
+                var objeto = value[j];
+
+                console.log(objeto);
+
+                 // Criar um linha
+                 var newRow = document.createElement("tr");
+                 // criar tres celulas
+                 var id = document.createElement("td");
+                 var nome = document.createElement("td");
+                 var telefone = document.createElement("td");
+                
+                 id.textContent = objeto.id;
+                 nome.textContent = objeto.nome;
+                 telefone.textContent = objeto.telefone;
+         
+                 // Add dados na linha
+                 newRow.appendChild(id);
+                 newRow.appendChild(nome);
+                 newRow.appendChild(telefone);
+         
+                 // ADD linha na tabela
+                 tableBody.appendChild(newRow);
+
+            } 
+        }
+    }
+});
+
+    
+</script>
+</html>
